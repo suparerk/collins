@@ -1,3 +1,10 @@
-b2p-ui
+### To start with npm
+```
+npm install
+npm run dev
+```
 
-Test master
+### To start with docker:
+```
+docker-compose up --build
+```
