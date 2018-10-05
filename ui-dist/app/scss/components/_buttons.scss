@@ -1,0 +1,27 @@
+// # Buttons 
+
+a.btn,
+button.btn {
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #b83895, #672d91);
+    color: $white;
+    border: 0;
+    padding: 0.75rem 1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    transform: scale(0.999);
+    transition: transform 0.5s, opacity 0.5s;
+    &:hover,
+    &:focus {
+        transform: scale(1.025);
+    }
+    &--border {
+        background: transparent;
+        border: 1px solid $purple;
+        color: $purple;
+        &:hover,
+        &:focus {
+            color: $purple;
+        }
+    }
+}

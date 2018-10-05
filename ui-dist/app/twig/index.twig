@@ -1,0 +1,41 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+	<style type="text/css">
+		.main {
+			padding-top: 3rem;
+		  }
+		  h3 {
+			margin-top: 2rem;
+		  }
+		  .row {
+			margin-bottom: 1rem;
+		  }
+		  .row .row {
+			margin-top: 1rem;
+			margin-bottom: 0;
+		  }
+		  [class*="col-"] {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			background-color: rgba(86,61,124,.15);
+			border: 1px solid rgba(86,61,124,.2);
+		  }
+		  hr {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		  }
+		  
+	</style>
+{% endblock %}
+
+{% block main %}
+<div class="container main">
+
+	<h1>Dashboard</h1><br /><br />
+	<a href="login.html">> Login</a> <br /><br />
+	<a href="forgot_password.html">> forgot_password</a> <br />
+	
+</div> <!-- /container -->
+
+{% endblock main %}
