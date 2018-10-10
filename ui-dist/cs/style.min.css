@@ -1,5 +1,6 @@
 /* Developed and copyright by Plutonyx "Janejane Suwanwong" */
-@import url(vendors/jquery.mCustomScrollbar.css);
+@import url(./datatable/dataTables.bootstrap4.min.css);
+@import url(./datatable/fixedHeader.bootstrap4.min.css);
 .p--15 {
   padding: -15px;
 }
@@ -3152,7 +3153,7 @@ button.btn--border:focus {
 .box {
   width: 100%;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 10px;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -3164,9 +3165,42 @@ button.btn--border:focus {
   }
 }
 
-.box--no-shadow {
+.box--shadow {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.box--width-header {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.box__inner {
+  padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  .box__inner {
+    padding: 0 2rem;
+  }
+}
+
+.box__header {
+  border-radius: 10px 10px 0 0;
+}
+
+.box__header--shadow {
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+@media (min-width: 992px) {
+  .box__header--shadow {
+    padding: 1rem 2rem;
+  }
 }
 
 /*!

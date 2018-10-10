@@ -3,6 +3,10 @@
 //=============================================
 $("document").ready(function() {
 
+    var table = $('.datatable').DataTable( {
+        fixedHeader: true
+    } );
+
     // Custom Scrollbar
     // if ($(window).outerWidth() > 768) {
     //     $("nav.side-navbar").mCustomScrollbar({
