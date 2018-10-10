@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Link from 'next/link'
 import Head from 'next/head'
 import '../css/login.css'
+import '../css/style.css'
 
 export default class Login extends Component {
   constructor(props) {
