@@ -11,7 +11,7 @@ $("document").ready(function() {
     // }
 
     // Side Navbar Functionality
-    $('#toggle-btn').on('click', function (e) {
+    $('#toggle-btn, #toggle-btn-open').on('click', function (e) {
 
         e.preventDefault();
 
