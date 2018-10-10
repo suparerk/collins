@@ -2441,6 +2441,10 @@
   content: "\e926";
 }
 
+.icon-x:before {
+  content: "\e927";
+}
+
 html {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -2733,14 +2737,13 @@ a {
 
 .side-navbar li .nav-link {
   position: relative;
-  font-size: 0.5rem;
+  font-size: 0rem;
   line-height: 1;
   font-weight: 300;
   color: #fff;
   text-decoration: none;
   width: 100%;
   padding: 0.5rem;
-  display: block;
   text-align: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -2748,8 +2751,12 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background: url("../img/path.png") no-repeat bottom left/0 3px;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.01s linear;
+  transition: all 0.01s linear;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -2768,7 +2775,7 @@ a {
 
 .side-navbar li .nav-link span {
   width: 20px;
-  display: block;
+  display: inline-block;
   color: #6A6B7A;
   margin: 0 auto 5px;
 }
@@ -2840,13 +2847,18 @@ a {
 }
 
 .side-navbar.shrink .sidenav-header .sidenav-header-inner .nav-link {
-  font-size: 0rem;
   padding-left: 0;
   padding-right: 0;
+  opacity: 0;
+  width: 0;
+  height: 25px;
 }
 
 .side-navbar.shrink ul li .nav-link {
   font-size: 0rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .side-navbar.shrink ul li .nav-link span {
@@ -2904,7 +2916,7 @@ a {
   transition: width 0.3s linear;
   width: -webkit-calc(100% - 60px);
   width: calc(100% - 60px);
-  background-color: #fff;
+  background-color: #f1f3f6;
   min-height: 100vh;
   padding: 1rem;
 }
@@ -2956,6 +2968,7 @@ a {
   font-size: 0.75rem;
 }
 
+.btn,
 a.btn,
 button.btn {
   border-radius: 30px;
@@ -2976,7 +2989,9 @@ button.btn {
   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-a.btn:hover, a.btn:focus,
+.btn:hover, .btn:focus,
+a.btn:hover,
+a.btn:focus,
 button.btn:hover,
 button.btn:focus {
   -webkit-transform: scale(1.025);
@@ -2984,17 +2999,27 @@ button.btn:focus {
           transform: scale(1.025);
 }
 
+.btn--border, .btn--transparent,
 a.btn--border,
-button.btn--border {
+a.btn--transparent,
+button.btn--border,
+button.btn--transparent {
   background: transparent;
-  border: 1px solid #AF3694;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #AF3694;
+          box-shadow: inset 0px 0px 0px 1px #AF3694;
   color: #AF3694;
 }
 
-a.btn--border:hover, a.btn--border:focus,
+.btn--border:hover, .btn--border:focus, .btn--transparent:hover, .btn--transparent:focus,
+a.btn--border:hover,
+a.btn--border:focus,
+a.btn--transparent:hover,
+a.btn--transparent:focus,
 button.btn--border:hover,
-button.btn--border:focus {
-  color: #AF3694;
+button.btn--border:focus,
+button.btn--transparent:hover,
+button.btn--transparent:focus {
+  color: #AF3694 !important;
 }
 
 .form-control {
@@ -3152,6 +3177,7 @@ button.btn--border:focus {
 
 .box {
   width: 100%;
+  background: #fff;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
@@ -3201,6 +3227,50 @@ button.btn--border:focus {
   .box__header--shadow {
     padding: 1rem 2rem;
   }
+}
+
+.table__wrapper {
+  margin-top: 2rem;
+}
+
+.table__wrapper .dataTables_length,
+.table__wrapper .dataTables_paginate {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.table__wrapper .dataTables_paginate {
+  padding-left: 0.5rem;
+}
+
+.table__wrapper .btn,
+.table__wrapper a.btn,
+.table__wrapper button.btn {
+  border-radius: 30px;
+  background: transparent;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #AF3694;
+          box-shadow: inset 0px 0px 0px 1px #AF3694;
+  color: #AF3694;
+}
+
+.table__wrapper .btn:hover, .table__wrapper .btn:focus,
+.table__wrapper a.btn:hover,
+.table__wrapper a.btn:focus,
+.table__wrapper button.btn:hover,
+.table__wrapper button.btn:focus {
+  color: #AF3694 !important;
+}
+
+.table__wrapper .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.table__wrapper .btn-group > .btn-group:not(:last-child) > .btn,
+.table__wrapper .btn-group > .btn:not(:first-child),
+.table__wrapper .btn-group > .btn-group:not(:first-child) > .btn {
+  border-radius: 30px;
+  margin-left: 0.5rem;
 }
 
 /*!
@@ -13125,6 +13195,22 @@ a.text-dark:hover, a.text-dark:focus {
   color: #AF3694;
 }
 
+.ml--1 {
+  margin-left: -0.25rem !important;
+}
+
+.mr--1 {
+  margin-right: -0.25rem !important;
+}
+
+.ml--2 {
+  margin-left: -0.5rem !important;
+}
+
+.mr--2 {
+  margin-right: -0.5rem !important;
+}
+
 /* Reset
 -------------------------------------------------- */
 a {
@@ -13154,7 +13240,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
   color: #46474A;
-  background: #F0F2F5;
+  background: #fff;
 }
 
 @media (min-width: 768px) {
