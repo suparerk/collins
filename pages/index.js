@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Button, Nav } from 'reactstrap'
+import { Nav, NavItem, NavLink } from 'reactstrap'
 
 const Index = () => (
   <div>
@@ -20,14 +20,12 @@ const Index = () => (
           </div>
           <div className="row justify-content-center">
             <div className="col col-lg-6 mt-3">
-              <Link href="/login">
-                <a className="btn w-100">Login</a>
-              </Link>
+              <a className="btn w-100" href="/login">Login</a>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col col-lg-6 mt-3">
-              <a className="btn w-100" href="forgot_password.html">forgot password</a>
+              <a className="btn w-100" href="/forgot_password">forgot password</a>
             </div>
           </div>
           <div className="row justify-content-center">
