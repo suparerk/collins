@@ -1,5 +1,5 @@
 /* Developed and copyright by Plutonyx "Janejane Suwanwong" */
-@import url(vendors/jquery.mCustomScrollbar.css);
+/* @import url(vendors/jquery.mCustomScrollbar.css); */
 .p--15 {
   padding: -15px;
 }
@@ -2254,8 +2254,8 @@
 
 @font-face {
   font-family: 'icomoon-b2p';
-  src: url("../fonts/icomoon-b2p.eot?sa5pjt");
-  src: url("../fonts/icomoon-b2p.eot?sa5pjt#iefix") format("embedded-opentype"), url("../fonts/icomoon-b2p.ttf?sa5pjt") format("truetype"), url("../fonts/icomoon-b2p.woff?sa5pjt") format("woff"), url("../fonts/icomoon-b2p.svg?sa5pjt#icomoon-b2p") format("svg");
+  src: url("./fonts/icomoon-b2p.eot");
+  src: url("./fonts/icomoon-b2p.eot") format("embedded-opentype"), url("./fonts/icomoon-b2p.ttf") format("truetype"), url("./fonts/icomoon-b2p.woff") format("woff"), url("./fonts/icomoon-b2p.svg#icomoon-b2p") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2746,7 +2746,7 @@ a {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../img/path.png") no-repeat bottom left/0 3px;
+  background: url("../static/images/path.png") no-repeat bottom left/0 3px;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
@@ -2790,7 +2790,7 @@ a {
 }
 
 .side-navbar li .nav-link:focus, .side-navbar li .nav-link:hover, .side-navbar li .nav-link[aria-expanded="true"], .side-navbar li .nav-link.active {
-  background: url("../img/path.png") no-repeat bottom left/100% 3px;
+  background: url("../static/images/path.png") no-repeat bottom left/100% 3px;
   color: #E748C3;
   text-decoration: none;
 }

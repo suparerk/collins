@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import '../css/login.css'
-import '../css/style.css'
+// import '../css/style.css'
 
 const ForgotPassword = () => (
   <div>

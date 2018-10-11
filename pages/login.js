@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Link from 'next/link'
 import Head from 'next/head'
 import '../css/login.css'
-import '../css/style.css'
+// import '../css/style.css'
 
 export default class Login extends Component {
   constructor(props) {
@@ -68,7 +68,7 @@ export default class Login extends Component {
                             </div>
                           </div>
                           <div class="col-6 pl-1 text-right">
-                            <a class="gray-2 font-small text-shadow" href="forgot_password.html">Forgot Password?</a>
+                            <a class="gray-2 font-small text-shadow" href="/forgot_password">Forgot Password?</a>
                           </div>
                         </div>
                         <div class="col-12 col-md-6 p-0 mt-4">
