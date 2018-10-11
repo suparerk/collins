@@ -10,6 +10,15 @@ $("document").ready(function() {
         buttons: ['excel','colvis']
     } );
 
+    
+    $(".btn-show-more-search").on("click", function() {
+        $(".box-more-search").toggleClass('active');
+        $(this).toggleClass("active");
+      });
+
+    // $('.selectpicker').selectpicker();
+    // $('.datepicker').datepicker();
+
     // Custom Scrollbar
     // if ($(window).outerWidth() > 768) {
     //     $("nav.side-navbar").mCustomScrollbar({
@@ -55,7 +64,7 @@ $("document").ready(function() {
 //=============================================
 //           JQUERY WINDOW RESIZE            =
 //=============================================
-$(window).on("resize", resize);
+$(window).on('resize', resize);
 function resize() {
     
 } //windows.resize
@@ -64,7 +73,7 @@ function resize() {
 //=============================================
 //             JQUERY WINDOW LOAD            ==
 //=============================================
-$(window).load(function() {
+$(window).on('load', function(){
 
 
 
