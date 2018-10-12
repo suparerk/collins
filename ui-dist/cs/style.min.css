@@ -13178,9 +13178,9 @@ button.btn--transparent:focus {
   padding-left: 0.5rem;
 }
 
-.table__wrapper .btn,
-.table__wrapper a.btn,
-.table__wrapper button.btn {
+.table__wrapper .dt-buttons .btn,
+.table__wrapper .dt-buttons a.btn,
+.table__wrapper .dt-buttons button.btn {
   border-radius: 30px;
   background: transparent;
   -webkit-box-shadow: inset 0px 0px 0px 1px #AF3694;
@@ -13188,11 +13188,11 @@ button.btn--transparent:focus {
   color: #AF3694;
 }
 
-.table__wrapper .btn:hover, .table__wrapper .btn:focus,
-.table__wrapper a.btn:hover,
-.table__wrapper a.btn:focus,
-.table__wrapper button.btn:hover,
-.table__wrapper button.btn:focus {
+.table__wrapper .dt-buttons .btn:hover, .table__wrapper .dt-buttons .btn:focus,
+.table__wrapper .dt-buttons a.btn:hover,
+.table__wrapper .dt-buttons a.btn:focus,
+.table__wrapper .dt-buttons button.btn:hover,
+.table__wrapper .dt-buttons button.btn:focus {
   color: #AF3694 !important;
 }
 
@@ -13201,7 +13201,84 @@ button.btn--transparent:focus {
 .table__wrapper .btn-group > .btn:not(:first-child),
 .table__wrapper .btn-group > .btn-group:not(:first-child) > .btn {
   border-radius: 30px;
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.table__wrapper td {
+  border-color: #F1F3F6;
+  border-width: 2px;
+  text-align: center;
+}
+
+.table__wrapper thead tr th {
+  background: #F1F3F6;
+  border: 0;
+  text-align: center;
+}
+
+.table__wrapper .link,
+.table__wrapper a.link {
+  color: #AF3694;
+}
+
+.table .btn-wrap {
+  display: inline-block;
+}
+
+.dataTables_paginate {
+  padding-left: 0.5rem;
+}
+
+.dataTables_paginate .pagination .paginate_button a {
+  background: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  text-align: center;
+  color: #AF3694;
+  border-radius: 30px;
+  display: block;
+  border: 0;
+}
+
+.dataTables_paginate .pagination .paginate_button.active a {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b83895), to(#672d91));
+  background-image: -webkit-linear-gradient(left, #b83895, #672d91);
+  background-image: linear-gradient(to right, #b83895, #672d91);
+  color: #fff;
+}
+
+.dataTables_paginate .pagination .paginate_button.previous a {
+  visibility: hidden;
+}
+
+.dataTables_paginate .pagination .paginate_button.previous a:after {
+  font-family: 'icomoon-b2p' !important;
+  content: "\e90d";
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dataTables_paginate .pagination .paginate_button.next a {
+  visibility: hidden;
+}
+
+.dataTables_paginate .pagination .paginate_button.next a:after {
+  font-family: 'icomoon-b2p' !important;
+  content: "\e90e";
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 /* Utilities
