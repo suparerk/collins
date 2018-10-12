@@ -113,7 +113,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
   color: #46474A;
-  background: #F0F2F5;
+  background: #fff;
 }
 
 @media (min-width: 768px) {
@@ -132,4 +132,44 @@ body {
   .container {
     max-width: 100%;
   }
+}
+
+.box-more-search {
+  height: 47px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.box-more-search.active {
+  height: auto;
+}
+
+.btn-show-more-search {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn-show-more-search .text-open {
+  display: none;
+}
+
+.btn-show-more-search .text-close {
+  display: inline-block;
+}
+
+.btn-show-more-search:focus {
+  color: #AF3694;
+}
+
+.btn-show-more-search.active .text-open {
+  display: inline-block;
+}
+
+.btn-show-more-search.active .text-close {
+  display: none;
+}
+
+.btn-show-more-search.active .icon-arrow_small_down:before {
+  content: "\e90b";
 }
