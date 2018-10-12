@@ -20,16 +20,26 @@
   "homepage": "https://gitlab.com/mfec-ui/b2p-ui#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "next": "^7.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "reactstrap": "^6.5.0"
+    "react-redux": "^5.0.1",
+    "reactstrap": "^6.5.0",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-simple-auth": "^0.6.6",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "css-loader": "^1.0.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2"
   }
 }

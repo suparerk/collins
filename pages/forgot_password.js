@@ -33,16 +33,16 @@ const ForgotPassword = () => (
             </div>
             <div className="col-12 col-md-6 col-lg-5">
               <div className="box">
-                <form id="loginForm" className="col-12 p-0 needs-validation" novalidate="" action="/reset_resend.html">
+                <form id="loginForm" className="col-12 p-0 needs-validation" noValidate="" action="/reset_resend.html">
                   <div className="form-group mb-2">
                     <div className="form-label-group">
-                      <input type="text" id="inputUsername" className="form-control" placeholder="Username" value="testusername" required autofocus />
+                      <input type="text" id="inputUsername" className="form-control" placeholder="Username" value="testusername" required autoFocus />
                       <label for="inputUsername">Username</label>
                     </div>
                   </div>
                   <div className="form-group mb-2">
                     <div className="form-label-group">
-                      <input type="email" id="inputEmail" className="form-control" placeholder="E-mail" required autofocus />
+                      <input type="email" id="inputEmail" className="form-control" placeholder="E-mail" required autoFocus />
                       <label for="inputEmail">E-mail</label>
                     </div>
                   </div>
