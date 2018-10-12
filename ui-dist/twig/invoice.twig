@@ -1,0 +1,179 @@
+{% extends "./layouts/base.twig" %}
+{% block assets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+    <div class="page__header">
+        <h2>Purchase Order</h2>
+    </div>
+
+    <section class="box box--width-header"><!-- box--no-shadow -->
+
+        <div class="box__header box__header--shadow">
+            <div class="row justify-content-between align-items-center mb-2">
+                <div class="col">
+                    <h4>Search: </h4>
+                </div>
+                <div class="col text-right">
+                    <a class="btn btn--transparent btn-clear mr-2" href="javascript:;"><i class="icon icon-x"></i> Clear</a>
+                    <button class="btn" type="submit"><i class="icon icon-search"></i> Search</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-between align-items-start ml--2 mr--2">
+                <div class="col-12 col-md-10 pl-2 pr-2 pb-2 pb-md-0 box-more-search">   
+
+                    <div class="row justify-content-start align-items-center ml--2 mr--2">
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                                <div class="form-group">
+                                    <div class="form-label-group">
+                                        <input type="text" id="invoice_no" class="form-control" placeholder="Invoice No.">
+                                        <label for="invoice_no">Invoice No.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="inputDefault" class="form-control" placeholder="PO No.">
+                                    <label for="inputDefault">PO No.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="invoice_date" data-provide="datepicker" class="form-control datepicker" placeholder="Invoice Date">
+                                    <label for="invoice_date">Invoice Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="due_date" data-provide="datepicker" class="form-control datepicker" placeholder="Due Date">
+                                    <label for="due_date">Due Date</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <select class="custom-select" id="status">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="company_code" class="form-control" placeholder="Company Code">
+                                    <label for="company_code">Company Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="company_name" class="form-control" placeholder="Company Name">
+                                    <label for="company_name">Company Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="vendor_code" class="form-control" placeholder="Vendor Code">
+                                    <label for="vendor_code">Vendor Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                            <div class="form-group">
+                                <div class="form-label-group">
+                                    <input type="text" id="vendor_name" class="form-control" placeholder="Vendor Name">
+                                    <label for="vendor_name">Vendor Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .row -->
+                </div>
+                <div class="col-12 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center">
+                    <div class="purple mt-3 mb-3">
+                        <a href="javascript:;" class="btn-show-more-search">
+                            <span class="text-close">More Search</span><span class="text-open">Less Search</span> <i class="icon icon-arrow_small_down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- box__header -->
+
+        <div class="box__inner">
+            <div class="table__wrapper">
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>Invoice No.</th>
+                            <th>Company Code</th>
+                            <th>Vendor Code</th>
+                            <th>Vendor Name</th>
+                            <th>Invoice Date</th>
+                            <th>Due Date</th>
+                            <th>Payment Term<br />Description</th>
+                            <th>Invoice Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in 1..15 %}
+                        <tr>
+                            <td><a href="#">NEGRESIT-001</a></td>
+                            <td>0100</td>
+                            <td>0001001150</td>
+                            <td>BKK BAYSWOOD CO.,LT…</td>
+                            <td>15/08/2018</td>
+                            <td>15/08/2018</td>
+                            <td><small>Credit 30 days <br />after receive bill</small></td>
+                            <td>362,000.50</td>
+                            <td>Verifying</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- box__inner -->
+        
+    </section>
+
+  
+{% endblock main %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script>
+    $("document").ready(function() {
+        var table = $('.datatable').DataTable( {
+            dom: '<<"row justify-content-between align-items-center mb-3"<"col"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create">B>><t>>',
+            "language": {
+                "lengthMenu": "Display _MENU_ Per Page"
+            },
+            fixedHeader: true,
+            stateSave: true,
+            buttons: ['excel','colvis']
+        });
+
+        $(".btn-wrap.upload").html('<a class="btn ml-1" href="javascript:;">Upload Invoice</a>');
+        $(".btn-wrap.create").html('<a class="btn ml-1" href="javascript:;">Create Invoice</a>');
+    })
+    
+    </script>
+{% endblock %}
+
