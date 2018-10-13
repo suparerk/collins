@@ -365,12 +365,95 @@
           </div>
         </div><!-- box__inner -->
       </section>
+      <!-- Modal -->
+      <div class="modal fade" id="openColumnDisplay" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content bg-lightgray mb-3">
+            <div class="modal-header">
+              <h5 class="modal-title">Column List</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center" style="height: 60vh">
+                <div class="col w-45 h-100">
+                  <div data-force="30" class="lists h-100">
+                    <div class="lists__header justify-content-between">
+                      <span>Choose Column Display</span>
+                      <button class="list-btn add-all green">All <i class="fa fa-plus"></i></button>
+                    </div>
+                    <ul id="allColumn" class="lists__sortlist">
+                      <li class="li">
+                        <span>Invoice No</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Company Code</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Vendor Code</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Vendor Name</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Invoice Date</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Due Date</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Payment Term Description</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                      <li class="li">
+                        <span>Invoice Amount</span>
+                        <button class="list-btn add"><i class="fa fa-plus"></i></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col w-10 p-0 h-100">
+                </div>
+                <div class="col w-45 h-100">
+                  <div data-force="18" class="lists h-100">
+                    <div class="lists__header justify-content-between">
+                      <span>Current Column Display</span>
+                      <!-- <button class="list-btn">All <i class="fa fa-minus remove"></i></button> -->
+                    </div>
+                    <ul id="currentColumn" class="lists__sortlist sortable">
+                      <li class="li fixed">
+                        <span>Status</span>
+                        <button class="list-btn"><i class="fa fa-plus"></i></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn--transparent remove-all">Reset Default</button>
+              <button type="button" class="btn btn--transparent" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/app.js"></script>
     <script src="js/scripts.js"></script>
     <script>
+      $(window).on('load', function() {
+        // $('#openColumnDisplay').modal('show');
+      });
       $("document").ready(function() {
         var table = $('.datatable').DataTable({
           dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
@@ -382,7 +465,7 @@
         });
         $(".btn-wrap.upload").html('<a class="btn ml-1" href="javascript:;">Upload Invoice</a>');
         $(".btn-wrap.create").html('<a class="btn ml-1" href="javascript:;">Create Invoice</a>');
-        $(".btn-wrap.col-display").html('<a class="btn btn--transparent ml-1" href="javascript:;">Column Display</a>');
+        $(".btn-wrap.col-display").html('<button class="btn btn--transparent ml-1" data-toggle="modal" data-target="#openColumnDisplay">Column Display</button>');
         $(".btn-wrap.export").html('<a class="btn btn--transparent ml-1" href="javascript:;"><i class="icon icon-export"></i> Export</a>');
       });
       $(function() {
@@ -393,6 +476,25 @@
           console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
         });
         $('input[name="daterange"]').val('');
+      });
+      Sortable.create(document.getElementById('currentColumn'), {
+        group: "column",
+        animation: 150,
+        onAdd: function(evt) {
+          console.log('onAdd.currentColumn:', evt.item);
+        },
+        onUpdate: function(evt) {
+          console.log('onUpdate.currentColumn:', evt.item);
+        },
+        onRemove: function(evt) {
+          console.log('onRemove.currentColumn:', evt.item);
+        },
+        onStart: function(evt) {
+          console.log('onStart.allColumn:', evt.item);
+        },
+        onEnd: function(evt) {
+          console.log('onEnd.allColumn:', evt.item);
+        }
       });
     </script>
   </body>
