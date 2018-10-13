@@ -15,7 +15,7 @@ $("document").ready(function() {
 
     
     $(".btn-show-more-search").on("click", function() {
-        $(".box-more-search").toggleClass('active');
+        $(".box-more-search").toggleClass("active");
         $(this).toggleClass("active");
       });
 

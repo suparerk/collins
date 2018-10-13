@@ -13,24 +13,32 @@
     <nav class="side-navbar shrink">
       <div class="side-navbar-wrapper">
         <!-- Sidebar Header -->
-        <div class="sidenav-header d-flex align-items-center">
-          <div class="sidenav-header-inner">
-            <div class="sidenav-header-inner--wrap">
-              <div id="toggle-btn" class="toggle-btn">
-                <div class="logo-wrap">
-                  <img src="./img/logo/logo.png">
+        <!-- <div class="sidenav-header d-flex align-items-center">
+            <div class="sidenav-header-inner">
+                <div class="sidenav-header-inner--wrap">
+                    <div id="toggle-btn" class="toggle-btn">
+                        <div class="logo-wrap">
+                            <img src="./img/logo/logo.png">
+                        </div>
+                    </div>
+                    <a class="nav-link" href="./dashboard.html">
+                        <span>Dashboard</span>
+                    </a>
                 </div>
-              </div>
-              <a class="nav-link" href="./dashboard.html">
-                <span>Dashboard</span>
-              </a>
             </div>
-          </div>
-        </div>
+        </div> -->
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">
             <div>
+              <li>
+                <a class="nav-link" href="dashboard.html">
+                  <span>
+                    <div class="logo-wrap">
+                      <img src="./img/logo/logo_nav.png">
+                    </div>
+                  </span> Dashboard </a>
+              </li>
               <li><a class="nav-link active" href="po.html"><span><i class="icon icon-PO"></i></span>Purchase Order</a></li>
               <li><a class="nav-link" href="gr.html"><span><i class="icon icon-GR"></i></span>Goods Receive</a></li>
               <li><a class="nav-link" href="invoice.html"><span><i class="icon icon-INV"></i></span>Invoice</a></li>
@@ -65,7 +73,7 @@
     </div>
     <div class="page active">
       <div class="page__header">
-        <h2>Purchase Order</h2>
+        <h2 class="list">Invoice</h2>
       </div>
       <section class="box box--width-header">
         <!-- box--no-shadow -->
@@ -82,7 +90,7 @@
           <div class="row justify-content-between align-items-start ml--2 mr--2">
             <div class="col-12 col-md-10 pl-2 pr-2 pb-2 pb-md-0 box-more-search">
               <div class="row justify-content-start align-items-center ml--2 mr--2">
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="invoice_no" class="form-control" placeholder="Invoice No.">
@@ -90,7 +98,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="inputDefault" class="form-control" placeholder="PO No.">
@@ -98,7 +106,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="invoice_date" data-provide="datepicker" class="form-control datepicker" placeholder="Invoice Date">
@@ -106,7 +114,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="due_date" data-provide="datepicker" class="form-control datepicker" placeholder="Due Date">
@@ -114,7 +122,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <select class="custom-select" id="status">
@@ -126,7 +134,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="company_code" class="form-control" placeholder="Company Code">
@@ -134,7 +142,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="company_name" class="form-control" placeholder="Company Name">
@@ -142,7 +150,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="vendor_code" class="form-control" placeholder="Vendor Code">
@@ -150,7 +158,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 col-md-2 pl-2 pr-2 pb-2 pb-md-0">
+                <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
                       <input type="text" id="vendor_name" class="form-control" placeholder="Vendor Name">
@@ -188,7 +196,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -199,7 +207,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -210,7 +218,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -221,7 +229,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -232,7 +240,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -243,7 +251,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -254,7 +262,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -265,7 +273,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -276,7 +284,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -287,7 +295,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -298,7 +306,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -309,7 +317,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -320,7 +328,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -331,7 +339,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -342,7 +350,7 @@
                   <td>Verifying</td>
                 </tr>
                 <tr>
-                  <td><a href="#">NEGRESIT-001</a></td>
+                  <td><a class="link" href="#">NEGRESIT-001</a></td>
                   <td>0100</td>
                   <td>0001001150</td>
                   <td>BKK BAYSWOOD CO.,LT…</td>
@@ -365,16 +373,17 @@
     <script>
       $("document").ready(function() {
         var table = $('.datatable').DataTable({
-          dom: '<<"row justify-content-between align-items-center mb-3"<"col"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create">B>><t>>',
+          dom: '<<"row justify-content-between align-items-center mb-3"<"col d-flex align-items-center"lp><"col d-flex justify-content-end"<"btn-wrap upload"><"btn-wrap create"><"btn-wrap col-display"><"btn-wrap export">>><t>>',
           "language": {
             "lengthMenu": "Display _MENU_ Per Page"
           },
           fixedHeader: true,
-          stateSave: true,
-          buttons: ['excel', 'colvis']
+          stateSave: true
         });
         $(".btn-wrap.upload").html('<a class="btn ml-1" href="javascript:;">Upload Invoice</a>');
         $(".btn-wrap.create").html('<a class="btn ml-1" href="javascript:;">Create Invoice</a>');
+        $(".btn-wrap.col-display").html('<a class="btn btn--transparent ml-1" href="javascript:;">Column Display</a>');
+        $(".btn-wrap.export").html('<a class="btn btn--transparent ml-1" href="javascript:;"><i class="icon icon-export"></i> Export</a>');
       })
     </script>
   </body>
