@@ -20,6 +20,7 @@
   "homepage": "https://gitlab.com/mfec-ui/b2p-ui#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "classnames": "^2.2.6",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "next": "^7.0.1",
     "react": "^16.5.2",
