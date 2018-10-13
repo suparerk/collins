@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="loginpage">
+    <div class="loginpage" id="particles-js">
         <div class="loginpage__wrap">
             <div class="container d-flex h-100 p-0">
                 <div class="row w-100 m-0 justify-content-center align-self-center">
@@ -26,10 +26,10 @@
 
                             <form id="loginForm" class="col-12 col-md-6 col-lg-4 p-0 needs-validation" novalidate="" action="/" method="POST">
                                 <div class="form-group mb-2">
-                                    <input type="text" id="" class="form-control" placeholder="Username" required autofocus>
+                                    <input type="text" id="username" class="form-control" placeholder="Username" required >
                                 </div>
                                 <div class="form-group mb-2">
-                                    <input type="password" id="" class="form-control" placeholder="Password" required>
+                                    <input type="password" id="password" class="form-control" placeholder="Password" required>
                                 </div>
                                 <p class="invalid-feedback error_msg mb-2">Your account or password is incorrect. Please try again.</p>
                                 <div class="row">
@@ -64,7 +64,10 @@
 
 {% block scripts %}
     {{ parent() }}
+    <script src="./js/particles.js"></script>
+    <script src="./js/particles_json.js"></script>
     <script>
+
         $("#btnSubmit").click(function(event) {
             var form = $("#loginForm")
     

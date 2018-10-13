@@ -16,7 +16,7 @@ h2 {
 .loginpage__wrap {
   padding: 3rem 0;
   min-height: 100vh;
-  background: url("../img/login/bg_mb.png") no-repeat center right/auto 100%;
+  background: url("../img/login/bg_mb.png") transparent no-repeat center right/auto 100%;
 }
 
 @media (min-width: 768px), (min-height: 560px) {
@@ -31,7 +31,7 @@ h2 {
 }
 
 .loginpage__wrap--bg-2 {
-  background: url("../img/login/bg_2.png") no-repeat #f1f1f1 center top/cover;
+  background-image: none;
 }
 
 .loginpage .logo img {
