@@ -3,21 +3,10 @@
 //=============================================
 $("document").ready(function() {
 
-    // var table = $('.datatable').DataTable( {
-    //     dom: '<<"row justify-content-between align-items-center"<"col"lp><"col text-right"B>><t>>',
-    //     "oLanguage": {
-    //         "sInfo": "Got a total of _TOTAL_ entries to show (_START_ to _END_)"
-    //       }
-    //     fixedHeader: true,
-    //     stateSave: true,
-    //     buttons: ['excel','colvis']
-    // } );
-
-    
     $(".btn-show-more-search").on("click", function() {
         $(".box-more-search").toggleClass("active");
         $(this).toggleClass("active");
-      });
+    });
 
     // $('.selectpicker').selectpicker();
     // $('.datepicker').datepicker();

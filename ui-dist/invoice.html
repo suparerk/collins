@@ -109,7 +109,7 @@
                 <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
-                      <input type="text" id="invoice_date" data-provide="datepicker" class="form-control datepicker" placeholder="Invoice Date">
+                      <input type="text" id="invoice_date" class="form-control datepicker" name="daterange" placeholder="Invoice Date">
                       <label for="invoice_date">Invoice Date</label>
                     </div>
                   </div>
@@ -117,7 +117,7 @@
                 <div class="col w-20 pl-2 pr-2 pb-2 pb-md-0">
                   <div class="form-group">
                     <div class="form-label-group">
-                      <input type="text" id="due_date" data-provide="datepicker" class="form-control datepicker" placeholder="Due Date">
+                      <input type="text" id="due_date" class="form-control datepicker" name="daterange" placeholder="Due Date">
                       <label for="due_date">Due Date</label>
                     </div>
                   </div>
@@ -172,7 +172,7 @@
             <div class="col-12 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center">
               <div class="purple mt-3 mb-3">
                 <a href="javascript:;" class="btn-show-more-search">
-                  <span class="text-close">More Search</span><span class="text-open">Less Search</span> <i class="icon icon-arrow_small_down"></i>
+                  <span class="text-close text-bold">More Search</span><span class="text-open text-bold">Less Search</span> <i class="icon icon-arrow_small_down"></i>
                 </a>
               </div>
             </div>
@@ -384,7 +384,16 @@
         $(".btn-wrap.create").html('<a class="btn ml-1" href="javascript:;">Create Invoice</a>');
         $(".btn-wrap.col-display").html('<a class="btn btn--transparent ml-1" href="javascript:;">Column Display</a>');
         $(".btn-wrap.export").html('<a class="btn btn--transparent ml-1" href="javascript:;"><i class="icon icon-export"></i> Export</a>');
-      })
+      });
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          "showDropdowns": true,
+          "autoApply": true,
+        }, function(start, end, label) {
+          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+        $('input[name="daterange"]').val('');
+      });
     </script>
   </body>
 
