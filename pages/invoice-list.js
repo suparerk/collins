@@ -292,7 +292,7 @@ class Index extends React.Component {
               </div>
               <div className="col-12 col-md-2 pl-2 pr-2 pb-2 pb-md-0 text-center">
                 <div className="purple mt-3 mb-3">
-                  <a className="btn-show-more-search" onClick={this._toggleSearchExpanded}>
+                  <a className="btn-show-more-search _cs-pt" onClick={this._toggleSearchExpanded}>
                     <span className="text-close text-bold">More Search</span><span className="text-open text-bold">Less Search</span> <i className="icon icon-arrow_small_down"></i>
                   </a>
                 </div>
