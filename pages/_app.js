@@ -2,6 +2,7 @@ import App, { Container } from 'next/app'
 import React from 'react'
 import { Provider } from 'react-redux'
 import withReduxStore from '../lib/with-redux-store'
+import 'biomatic/dist/biomatic.min.css'
 import '../css/style.css'
 import '../css/login.css'
 

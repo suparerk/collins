@@ -12,7 +12,7 @@ class SideNavBar extends React.Component {
     const classSideNavBar = classnames('side-navbar', { shrink: !isExpandedSideNavBar });
 
     return (
-      <React.Fragment>
+      <div>
         <nav className={classSideNavBar} onMouseOver={() => this.setState({ isExpandedSideNavBar: true })} onMouseLeave={() => this.setState({ isExpandedSideNavBar: false })}>
           <div className="side-navbar-wrapper">
             <div className="sidenav-header d-flex align-items-center">
@@ -53,7 +53,7 @@ class SideNavBar extends React.Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

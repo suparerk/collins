@@ -19,20 +19,23 @@
   },
   "homepage": "https://gitlab.com/mfec-ui/b2p-ui#readme",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
+    "biomatic": "^0.3.6",
     "classnames": "^2.2.6",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "next": "^7.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.1",
+    "react-table": "^6.8.6",
     "reactstrap": "^6.5.0",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-simple-auth": "^0.6.6",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "styled-components": "^3.4.10"
   },
   "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
     "css-loader": "^1.0.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
