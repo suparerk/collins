@@ -1,8 +1,6 @@
 import React from 'react'
-import Head from 'next/head'
+import Link from 'next/link'
 import classnames from 'classnames'
-import '../css/style.css'
-import '../css/login.css'
 
 class SideNavBar extends React.Component {
   state = {
@@ -14,12 +12,7 @@ class SideNavBar extends React.Component {
     const classSideNavBar = classnames('side-navbar', { shrink: !isExpandedSideNavBar });
 
     return (
-      <div>
-        <Head>
-          <title>B2PUI</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
-        </Head>
+      <React.Fragment>
         <nav className={classSideNavBar} onMouseOver={() => this.setState({ isExpandedSideNavBar: true })} onMouseLeave={() => this.setState({ isExpandedSideNavBar: false })}>
           <div className="side-navbar-wrapper">
             <div className="sidenav-header d-flex align-items-center">
@@ -41,7 +34,7 @@ class SideNavBar extends React.Component {
                 <div>
                   <li><a className="nav-link active" href="po.html"><span><i className="icon icon-PO"></i></span>Purchase Order</a></li>
                   <li><a className="nav-link" href="gr.html"><span><i className="icon icon-GR"></i></span>Goods Receive</a></li>
-                  <li><a className="nav-link" href="invoice.html"><span><i className="icon icon-INV"></i></span>Invoice</a></li>
+                  <li><Link href="/invoice"><a className="nav-link"><span><i className="icon icon-INV"></i></span>Invoice</a></Link></li>
                   <li><a className="nav-link" href="cn.html"><span><i className="icon icon-CN"></i></span>Credit Note</a></li>
                   <li><a className="nav-link" href="dn.html"><span><i className="icon icon-DN"></i></span>Debit Note</a></li>
                   <li><a className="nav-link" href="3wm.html"><span><i className="icon icon-3wm"></i></span>3 Way Matching</a></li>
@@ -60,34 +53,7 @@ class SideNavBar extends React.Component {
             </div>
           </div>
         </div>
-        <div className="page active">
-          <div className="container main pt-4">
-            <div className="container">
-              <div className="row">
-                <div className="text-center mb-3 col col-lg-12">
-                  <h1>MENU</h1>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col col-lg-6 mt-3">
-                  <a className="btn w-100" href="/login">Login</a>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col col-lg-6 mt-3">
-                  <a className="btn w-100" href="/forgot_password">forgot password</a>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col col-lg-6 mt-3">
-                  <a className="btn w-100" href="dashboard.html">Dashboard</a>
-                </div>
-              </div>
-              <div className="row mb-5" />
-            </div>
-          </div>
-        </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
