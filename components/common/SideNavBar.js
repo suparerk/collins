@@ -3,17 +3,13 @@ import Link from 'next/link'
 import classnames from 'classnames'
 
 class SideNavBar extends React.Component {
-  state = {
-    isExpandedSideNavBar: false
-  }
-
   render () {
-    const { isExpandedSideNavBar } = this.state
+    const { isExpandedSideNavBar, toggleExpandedSideNavBar } = this.props
     const classSideNavBar = classnames('side-navbar', { shrink: !isExpandedSideNavBar });
 
     return (
       <div>
-        <nav className={classSideNavBar} onMouseOver={() => this.setState({ isExpandedSideNavBar: true })} onMouseLeave={() => this.setState({ isExpandedSideNavBar: false })}>
+        <nav className={classSideNavBar} onMouseOver={() => toggleExpandedSideNavBar(true)} onMouseLeave={() => toggleExpandedSideNavBar(false)}>
           <div className="side-navbar-wrapper">
             <div className="sidenav-header d-flex align-items-center">
               <div className="sidenav-header-inner">
