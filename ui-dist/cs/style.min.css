@@ -18041,15 +18041,6 @@ table.dataTable thead .sorting_desc_disabled:after {
   border: none !important;
 }
 
-nav.side-navbar,
-.sidenav-header-toggle {
-  display: none !important;
-}
-
-.page {
-  width: 100% !important;
-}
-
 .itsNotButton {
   cursor: default !important;
 }
