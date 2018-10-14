@@ -18284,34 +18284,34 @@ a.btn:hover, a.btn:focus {
 h1, h2, h3, h4, h5, h6,
 strong, b, .text-bold {
   font-family: 'kanitmedium';
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 /* CUSTOMIZE STYLES
 -------------------------------------------------- */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'kanitlight';
-  font-size: 0.8rem;
-  color: #46474A;
-  background: #fff;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: 'kanitlight' !important;
+  font-size: 0.8rem !important;
+  color: #46474A !important;
+  background: #fff !important;
 }
 
 @media (min-width: 768px) {
   body {
-    font-size: 0.9333rem;
+    font-size: 0.9333rem !important;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1170px !important;
   }
 }
 
 @media (max-width: 1199.98px) {
   .container {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }

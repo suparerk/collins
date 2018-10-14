@@ -19,7 +19,7 @@ class SideNavBar extends React.Component {
                       <img src="/static/images/logo/logo.png" alt="logo" />
                     </div>
                   </div>
-                  <a className="nav-link" href="/static/images/dashboard.html">
+                  <a className="nav-link" href="/">
                     <span>Dashboard</span>
                   </a>
                 </div>
@@ -30,7 +30,7 @@ class SideNavBar extends React.Component {
                 <div>
                   <li><a className="nav-link active" href="po.html"><span><i className="icon icon-PO"></i></span>Purchase Order</a></li>
                   <li><a className="nav-link" href="gr.html"><span><i className="icon icon-GR"></i></span>Goods Receive</a></li>
-                  <li><Link href="/invoice"><a className="nav-link"><span><i className="icon icon-INV"></i></span>Invoice</a></Link></li>
+                  <li><Link href="/invoice-list"><a className="nav-link"><span><i className="icon icon-INV"></i></span>Invoice</a></Link></li>
                   <li><a className="nav-link" href="cn.html"><span><i className="icon icon-CN"></i></span>Credit Note</a></li>
                   <li><a className="nav-link" href="dn.html"><span><i className="icon icon-DN"></i></span>Debit Note</a></li>
                   <li><a className="nav-link" href="3wm.html"><span><i className="icon icon-3wm"></i></span>3 Way Matching</a></li>

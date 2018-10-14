@@ -35,6 +35,11 @@ class Index extends React.Component {
                 <a className="btn w-100" href="dashboard.html">Dashboard</a>
               </div>
             </div>
+            <div className="row justify-content-center">
+              <div className="col col-lg-6 mt-3">
+                <a className="btn w-100" href="/invoice-detail">Invoice detail</a>
+              </div>
+            </div>
             <div className="row mb-5" />
           </div>
         </div>
